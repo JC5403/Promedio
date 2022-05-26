@@ -1,4 +1,6 @@
 
+alert("PREPARENCE PARA EL MEJOR TRABAJO DEL MUNDO")
+
 $(document).ready(function () {
     let urlEstudaintes = "http://localhost:8080/estudiantes";
     $.ajax({
