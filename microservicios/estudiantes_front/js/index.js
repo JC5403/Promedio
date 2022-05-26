@@ -1,12 +1,3 @@
-// const xhttp = new XMLHttpRequest();
-// xhttp.open("get","http://localhost:8080/estudiantes");
-// xhttp.onload = function () {
-//     console.log(this);
-// }
-
-
-// xhttp.send();
-
 
 $(document).ready(function () {
     let urlEstudaintes = "http://localhost:8080/estudiantes";
