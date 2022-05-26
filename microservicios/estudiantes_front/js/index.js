@@ -1,6 +1,21 @@
 
 alert("PREPARENCE PARA EL MEJOR TRABAJO DEL MUNDO")
 
+var consulta = ("#searchTable").DataTable()
+
+$("#inputBusqueda").keyup(function(){
+    consulta.search($(this).val()).draw();
+})
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
     let urlEstudaintes = "http://localhost:8080/estudiantes";
     $.ajax({
