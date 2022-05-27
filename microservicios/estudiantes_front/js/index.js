@@ -1,5 +1,5 @@
 
-alert("PREPARENCE PARA EL MEJOR TRABAJO DEL MUNDO")
+//alert("PREPARENCE PARA EL MEJOR TRABAJO DEL MUNDO")
 
 var consulta = ("#searchTable").DataTable()
 
