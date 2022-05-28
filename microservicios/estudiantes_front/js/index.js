@@ -1,7 +1,8 @@
 
 //alert("PREPARENCE PARA EL MEJOR TRABAJO DEL MUNDO")
 
-var consulta = ("#searchTable").DataTable()
+var consulta = $("#searchTable").DataTable();
+
 
 $("#inputBusqueda").keyup(function(){
     consulta.search($(this).val()).draw();
