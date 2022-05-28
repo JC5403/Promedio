@@ -7,13 +7,25 @@
     <script src="js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+
 	<header>
 		<div class="header-top">
 			<div class="navegacion">
+				<label>Código:</label>
 				<input type="search" placeholder="Código . . . " id="inputBusqueda">
 			</div>
-		</div>
+			<div class="nombre">
+				<label>Nombre:</label>
+				<input name="nombre" id="nombre" type="text" disabled  />
+			  </div>
+		
+		<div class="materia"> 
+			<label>Materia:</label>
+			<input id="valorID"name="valorInput" type="text"value="Programación avanzada"disabled/></div>
+		</div>	
+	</div>
+	</header>
+	<body>
 		<div class="search" id="search">
 			<table class="search-table" id="searchTable">
 				<thead>
@@ -21,7 +33,6 @@
 						<th>Actividad</th><th>Nota</th><th>Editar</th>
 					</tr>
 				</thead>
-				
 				<tr>
 					<td>Actividad 1</td><td>5.0</td><td><img src="https://cdn.icon-icons.com/icons2/931/PNG/512/edit_modify_icon-icons.com_72390.png" width="35" height="35"> 
 						<img src="https://cdn-icons-png.flaticon.com/512/88/88666.png" width="25" height="25" ></td>
@@ -29,7 +40,6 @@
 				</tr>
 			</table>
 		</div>
-	</header>
     <script src="js/index.js"></script>
 </body>
 </html>
