@@ -39,7 +39,7 @@ class EstudianteController extends Controller
      */
     public function show($id)
     {
-        $registro = Estudiante::find($id);
+        $registro = Estudiante::where('codigo',$id)->get();
         return response()->json(["data" =>$registro]);
     }
 

@@ -10,5 +10,5 @@ class Estudiante extends Model
         'codigo', 'nombres'
     ];
 
-    protected$table = "estudiantes";
+    protected$table = "estudiante";
 }

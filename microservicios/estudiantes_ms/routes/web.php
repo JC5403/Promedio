@@ -22,3 +22,9 @@ $router->post('estudiantes', 'EstudianteController@store');
 $router->get('estudiantes/{id}', 'EstudianteController@show');
 $router->put('estudiantes/{id}', 'EstudianteController@update');
 $router->delete('estudiantes/{id}', 'EstudianteController@destroy');
+
+$router->get('notas', 'Estudiantecontroller@index');
+$router->post('notas', 'EstudianteController@store');
+$router->get('notas/{id}', 'EstudianteController@show');
+$router->put('notas/{id}', 'EstudianteController@update');
+$router->delete('notas/{id}', 'EstudianteController@destroy');
