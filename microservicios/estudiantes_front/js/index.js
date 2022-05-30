@@ -25,16 +25,6 @@ function mostrarDatosLista() {
     html += "   <td>" + estudiante.actividad + "</td>";
     html += "   <td>" + estudiante.nota + "</td>";
     html += "   <td>";
-    html +=
-      '       <button type="button" onclick="modificarBotonClick(' +
-      index +
-      ')">Modificar</button>';
-    html +=
-      '       <button type="button" onclick="eliminarBotonClick(' +
-      index +
-      ')">Eliminar</button>';
-    html += "   </td>";
-    html += "</tr>";
   });
   let tabla = document.getElementById("listaEstudiantes");
   let tbody = tabla.getElementsByTagName("tbody")[0];
@@ -43,17 +33,7 @@ function mostrarDatosLista() {
 
 mostrarDatosLista();
 
-document.getElementById("crearBoton").addEventListener("click", function () {
-  ocultarFormulario(false);
-  document.getElementById("tituloFormulario").innerText =
-    "Registrar nueva nota";
-  let formulario = document.forms["formulario"];
 
-  formulario["actividad"].value = "";
-  formulario["nota"].value = "";
-  operacion = "crear";
-  indexSeleccionado = -1;
-});
 
 document.getElementById("formulario").addEventListener("submit", function (ev) {
   ev.preventDefault();
@@ -84,10 +64,6 @@ function modificarBotonClick(index) {
   indexSeleccionado = index;
 }
 
-function eliminarBotonClick(index) {
-  listaEstudiantes.splice(index, 1);
-  mostrarDatosLista();
-}
 
 document.getElementById("cancelarBoton").addEventListener("click", function () {
   ocultarFormulario(true);
@@ -96,7 +72,7 @@ document.getElementById("cancelarBoton").addEventListener("click", function () {
 //--------------------------------------------
 
 $(document).ready(function () {
-  let urlEstudaintes = "http://localhost:8000/estudiantes";
+  let urlEstudaintes = "http://localhost:8000/estudiante";
   // $.ajax({
   //   url: urlEstudaintes,
   //   type: "GET",
