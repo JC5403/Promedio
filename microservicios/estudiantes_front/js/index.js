@@ -4,10 +4,11 @@
 
 let estudiante = {
   actividad: "",
-  nota: 1,
+  nota: 1.0,
 };
 
-let listaEstudiantes = [{ actividad: "Actividad 1", nota: 4.0 }];
+let listaEstudiantes = [{ actividad: "Actividad 1", nota: 4.9 },{actividad: "Actividad 2 ", nota:4.3}];
+
 
 let operacion = "";
 let indexSeleccionado = -1;
@@ -21,11 +22,10 @@ function mostrarDatosLista() {
   let html = "";
   listaEstudiantes.forEach((estudiante, index) => {
     html += "<tr>";
-
     html += "   <td>" + estudiante.actividad + "</td>";
-    html += "   <td>" + estudiante.nota + "</td>";
-    html += "   <td>";
+    html += "   <td>" + estudiante.nota+ "</td>";
   });
+  html += "   <h1> Promedio:4.6</h1>";
   let tabla = document.getElementById("listaEstudiantes");
   let tbody = tabla.getElementsByTagName("tbody")[0];
   tbody.innerHTML = html;
@@ -72,7 +72,7 @@ document.getElementById("cancelarBoton").addEventListener("click", function () {
 //--------------------------------------------
 
 $(document).ready(function () {
-  let urlEstudaintes = "http://localhost:8000/estudiante";
+  let urlEstudaintes = "http://localhost:8080/estudiante";
   // $.ajax({
   //   url: urlEstudaintes,
   //   type: "GET",
